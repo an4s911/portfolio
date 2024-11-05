@@ -8,3 +8,8 @@
     @apply scroll-smooth;
     font-family: Cantarell, Inter, sans-serif;
 }
+
+.dt {
+    /* default transition (dt) */
+    @apply transition-[color,background,box-shadow,opacity] duration-300;
+}
