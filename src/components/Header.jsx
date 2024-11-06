@@ -12,11 +12,14 @@ import {
     XMarkIcon,
 } from "@heroicons/react/24/outline";
 
-function NavItem({ href, name }) {
+function NavItem({ href, name, setOpenNav }) {
+    const handleClick = () => setOpenNav(false);
+
     return (
         <a
             href={href}
             className="flex items-center px-1 py-2 hover:text-blue-500 hover:bg-gray-200 dark:hover:bg-gray-700 md:hover:bg-inherit dark:md:hover:bg-inherit"
+            onClick={handleClick}
         >
             <Typography
                 as="li"
@@ -29,7 +32,7 @@ function NavItem({ href, name }) {
     );
 }
 
-function NavList() {
+function NavList({ setOpenNav }) {
     const [theme, setTheme] = useState(
         () => localStorage.getItem("theme") || "dark",
     );
@@ -67,7 +70,7 @@ function NavList() {
                 { name: "Experience", href: "#experience" },
                 { name: "Contact", href: "#contact" },
             ].map(({ name, href }) => (
-                <NavItem key={name} href={href} name={name} />
+                <NavItem key={name} href={href} name={name} setOpenNav={setOpenNav} />
             ))}
 
             <IconButton
@@ -106,6 +109,15 @@ export default function Header() {
         };
     }, []);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (openNav) {
+                setOpenNav(false);
+            }
+        };
+        window.addEventListener("scroll", handleScroll);
+    }, []);
+
     return (
         <header className="fixed w-full top-0 z-20">
             <Navbar className="mx-auto px-6 py-3 md:px-14 lg:px-24 lg:py-5 border-b border-t-0 border-r-0 border-l-0 border-black dark:border-gray-500  bg-gray-50 dt dark:bg-gray-900 text-gray-800 dark:text-white">
@@ -136,7 +148,7 @@ export default function Header() {
                 </div>
                 <Collapse open={openNav}>
                     <div className="md:hidden overflow-hidden">
-                        <NavList />
+                        <NavList setOpenNav={setOpenNav} />
                     </div>
                 </Collapse>
             </Navbar>
