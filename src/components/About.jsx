@@ -30,22 +30,26 @@ function About() {
                     <div className="flex justify-center items-center md:justify-start space-x-4">
                         <a
                             href="#contact"
-                            className="dt bg-white text-gray-800 px-6 py-3
-                                            rounded-full font-semibold hover:bg-gray-100
-                                            transition duration-300 shadow-md border dark:border-white 
-                                             hover:text-gray-800 hover:scale-105 border-gray-800 dark:shadow-gray-700"
+                            className="dt px-6 py-3 rounded-full font-semibold
+                                            shadow-md border hover:scale-105 dark:shadow-gray-700
+                                            bg-gray-800 dark:bg-gray-100 hover:bg-transparent
+                                            border-gray-800 dark:border-gray-100
+                                            text-gray-100 dark:text-gray-800 hover:text-gray-800 dark:hover:text-gray-100"
                         >
                             Get in touch
                         </a>
                         <a
                             href="#projects"
-                            className="dt px-6 py-3 bg-gray-800
-                                            rounded-full font-semibold 
-                                            transition duration-300 shadow-md dark:shadow-gray-700 border border-white text-white
-                                            hover:bg-white hover:text-gray-800 hover:scale-105"
+                            className="dt px-6 py-3 rounded-full font-semibold transition
+                                        duration-300 shadow-md dark:shadow-gray-700 border
+                                        hover:scale-105
+                                        hover:bg-gray-800 dark:hover:bg-gray-100
+                                        border-gray-800 dark:border-gray-100
+                                        text-gray-800 hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-800
+                                        "
                         >
                             <div className="flex items-center gap-2">
-                                <span>See What I&apos;ve Built</span>
+                                <span>See what I&apos;ve built</span>
                                 <ArrowDownIcon className="w-4 h-4" />
                             </div>
                         </a>
