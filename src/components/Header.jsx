@@ -78,12 +78,14 @@ function NavList() {
                 aria-label="Toggle Theme"
             >
                 <SunIcon
-                    className={`h-6 w-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 ${theme === "light" ? "opacity-100 " : "opacity-0 "
-                        }`}
+                    className={`h-6 w-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 ${
+                        theme === "light" ? "opacity-100" : "opacity-0"
+                    }`}
                 />
                 <MoonIcon
-                    className={`h-6 w-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 ${theme === "dark" ? "opacity-100" : "opacity-0 "
-                        }`}
+                    className={`h-6 w-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 ${
+                        theme === "dark" ? "opacity-100" : "opacity-0"
+                    }`}
                 />
             </IconButton>
         </ul>
@@ -105,8 +107,8 @@ export default function Header() {
     }, []);
 
     return (
-        <header className="sticky top-0">
-            <Navbar className="mx-auto px-6 py-3 md:px-14 lg:px-24 lg:py-5 border-black dark:border-gray-500 border-b bg-gray-50 dt dark:bg-gray-900 text-gray-800 dark:text-white">
+        <header className="sticky top-0 z-20">
+            <Navbar className="mx-auto px-6 py-3 md:px-14 lg:px-24 lg:py-5 border-b border-t-0 border-r-0 border-l-0 border-black dark:border-gray-500  bg-gray-50 dt dark:bg-gray-900 text-gray-800 dark:text-white">
                 <div className="flex items-center justify-between">
                     <Typography
                         as="a"
