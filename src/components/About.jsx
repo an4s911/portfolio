@@ -13,7 +13,7 @@ function About() {
                 </div>
                 <div className="flex flex-col items-center gap-8 md:items-stretch">
                     <h1 className="text-4xl font-bold leading-tight">
-                        Hi I&apos;m
+                        Hi I&apos;m{" "}
                         <span className="text-orange-400 underline whitespace-nowrap">
                             Anas Bashir
                         </span>
