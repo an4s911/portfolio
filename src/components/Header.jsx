@@ -107,7 +107,7 @@ export default function Header() {
     }, []);
 
     return (
-        <header className="sticky top-0 z-20">
+        <header className="fixed w-full top-0 z-20">
             <Navbar className="mx-auto px-6 py-3 md:px-14 lg:px-24 lg:py-5 border-b border-t-0 border-r-0 border-l-0 border-black dark:border-gray-500  bg-gray-50 dt dark:bg-gray-900 text-gray-800 dark:text-white">
                 <div className="flex items-center justify-between">
                     <Typography

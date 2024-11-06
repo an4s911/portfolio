@@ -9,10 +9,15 @@
 
 .dt {
     /* default transition (dt) */
-    @apply transition-[color,background,box-shadow,opacity] duration-300;
+    @apply transition-[color,background,box-shadow,opacity,border] duration-300;
 }
 
 a,
 a * {
     font-family: Cantarell, Inter, sans-serif;
+}
+
+#skills {
+    @apply px-16 scroll-mt-16 lg:scroll-mt-20;
+    scroll-margin-top: 6rem;
 }
