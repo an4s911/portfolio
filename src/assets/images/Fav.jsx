@@ -5,7 +5,7 @@ export default function Fav({ className }) {
             viewBox="0 0 338.66666 338.66668"
             version="1.1"
             id="svg8"
-            enable-background="new"
+            enableBackground="new"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:svg="http://www.w3.org/2000/svg"
             xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
