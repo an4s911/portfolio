@@ -18,6 +18,9 @@ a * {
 }
 
 #skills {
-    @apply px-16 scroll-mt-16 lg:scroll-mt-20;
-    scroll-margin-top: 6rem;
+    @apply py-16 px-4 md:px-8 lg:px-16 scroll-mt-16 lg:scroll-mt-20;
+}
+
+#skills:not(:last-child) {
+    @apply border-b border-gray-200 dark:border-gray-700 shadow shadow-gray-200 dark:shadow-gray-700;
 }
