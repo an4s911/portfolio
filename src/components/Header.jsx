@@ -70,7 +70,12 @@ function NavList({ setOpenNav }) {
                 { name: "Experience", href: "#experience" },
                 { name: "Contact", href: "#contact" },
             ].map(({ name, href }) => (
-                <NavItem key={name} href={href} name={name} setOpenNav={setOpenNav} />
+                <NavItem
+                    key={name}
+                    href={href}
+                    name={name}
+                    setOpenNav={setOpenNav}
+                />
             ))}
 
             <IconButton
@@ -116,7 +121,9 @@ export default function Header() {
             }
         };
         window.addEventListener("scroll", handleScroll);
-    }, []);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    });
 
     return (
         <header className="fixed w-full top-0 z-20">
