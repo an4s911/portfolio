@@ -13,7 +13,9 @@
 }
 
 a,
-a * {
+a *,
+button,
+button * {
     font-family: Cantarell, Inter, sans-serif;
 }
 

@@ -7,7 +7,7 @@ import OdinCalculatorImg from "../assets/images/projects/odin-calculator.png";
 import CS50FinalImg from "../assets/images/projects/cs50-final.png";
 
 const ProjectCard = ({ project }) => (
-    <div className="dt bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden project-card flex flex-col">
+    <div className="transition-[background] duration-300 bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden project-card flex flex-col">
         <img
             src={project.image}
             alt={project.title}
@@ -76,7 +76,7 @@ function MoreProjects({ projects }) {
         <div className="flex flex-col items-center">
             <Button
                 onClick={toggleOpen}
-                className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-200 font-semibold flex items-center gap-1 underline shadow-none p-0 text-sm md:text-base my-5"
+                className="flex items-center gap-1 underline shadow-none p-0 text-sm md:text-base my-5"
             >
                 <span className="whitespace-nowrap">View More</span>
                 <ArrowDownIcon
