@@ -7,9 +7,9 @@
     font-family: "Space Mono", Cantarell, Inter, sans-serif;
 }
 
+/* default transition (dt) */
 .dt {
-    /* default transition (dt) */
-    @apply transition-[color,background,box-shadow,opacity,border] duration-300;
+    @apply transition-[color,background,box-shadow,opacity,border,transform] duration-300;
 }
 
 a,

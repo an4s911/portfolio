@@ -5,7 +5,7 @@ function About() {
     return (
         <section
             id="about"
-            className="dt flex items-center justify-center bg-gradient-to-t dark:bg-gradient-to-bl from-gray-300 to-white dark:from-gray-900 dark:to-gray-700 md:py-20 mt-16 lg:mt-20"
+            className="flex items-center justify-center bg-gradient-to-t dark:bg-gradient-to-bl from-gray-300 to-white dark:from-gray-900 dark:to-gray-700 md:py-20 mt-16 lg:mt-20"
         >
             <div className="relative z-10 px-6 py-8 md:px-14 lg:px-24 text-center md:flex gap-10 md:text-left">
                 <div className="logo flex items-center justify-center w-full">
@@ -40,8 +40,8 @@ function About() {
                         </a>
                         <a
                             href="#projects"
-                            className="dt px-6 py-3 rounded-full font-semibold transition
-                                        duration-300 shadow-md dark:shadow-gray-700 border
+                            className="dt px-6 py-3 rounded-full font-semibold
+                                        shadow-md dark:shadow-gray-700 border
                                         hover:scale-105
                                         hover:bg-gray-800 dark:hover:bg-gray-100
                                         border-gray-800 dark:border-gray-100

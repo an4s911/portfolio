@@ -1,5 +1,5 @@
 const SkillCategory = ({ title, skills }) => (
-    <div className="dt shadow dark:shadow-gray-700 border-[1px] border-gray-200 dark:border-gray-800 px-6 py-4 rounded-md flex flex-col gap-4">
+    <div className="transition-[border,box-shadow] duration-300 shadow dark:shadow-gray-700 border-[1px] border-gray-200 dark:border-gray-800 px-6 py-4 rounded-md flex flex-col gap-4">
         <h3 className="text-xl font-semibold">{title}</h3>
         <div className="flex flex-wrap">
             {skills.map((skill, index) => (
@@ -95,7 +95,7 @@ const Skills = () => {
     ];
 
     return (
-        <section id="skills" className="dt flex flex-col gap-8">
+        <section id="skills" className="flex flex-col gap-8">
             <h2 className="text-3xl font-bold">Skills &amp; Expertise</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {skillsets.map((category, index) => (
