@@ -4,10 +4,7 @@ import Skills from "./components/Skills";
 
 function App() {
     return (
-        <div
-            className="text-gray-800 dark:text-white dt"
-            id="app"
-        >
+        <div className="text-gray-800 dark:text-white dt" id="app">
             <Header />
             <About />
             <Skills />

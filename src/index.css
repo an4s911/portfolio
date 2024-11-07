@@ -22,5 +22,5 @@ a * {
 }
 
 #skills:not(:last-child) {
-    @apply border-b border-gray-200 dark:border-gray-700 shadow shadow-gray-200 dark:shadow-gray-700;
+    @apply border-gray-200 dark:border-gray-700 shadow-sm dark:shadow-md;
 }

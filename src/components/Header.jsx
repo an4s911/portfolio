@@ -82,7 +82,7 @@ function NavList({ setOpenNav }) {
                 id="theme-toggle-btn"
                 onClick={toggleTheme}
                 ripple={false}
-                className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 dt w-10 h-10 rounded-full focus:outline-none flex justify-center items-center relative"
+                className="bg-gray-200 dark:bg-gray-900 text-gray-800 dark:text-gray-200 dt w-10 h-10 rounded-full focus:outline-none flex justify-center items-center relative"
                 aria-label="Toggle Theme"
             >
                 <SunIcon
@@ -127,7 +127,7 @@ export default function Header() {
 
     return (
         <header className="fixed w-full top-0 z-20">
-            <Navbar className="mx-auto px-6 py-3 md:px-14 lg:px-24 lg:py-5 border-b border-t-0 border-r-0 border-l-0 border-black dark:border-gray-500  bg-gray-50 dt dark:bg-gray-900 text-gray-800 dark:text-white">
+            <Navbar className="mx-auto px-6 py-3 md:px-14 lg:px-24 lg:py-5 border-0 shadow-md bg-gray-50 dt dark:bg-gray-800 text-gray-800 dark:text-white">
                 <div className="flex items-center justify-between">
                     <Typography
                         as="a"
