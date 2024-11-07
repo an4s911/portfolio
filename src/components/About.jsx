@@ -5,9 +5,9 @@ function About() {
     return (
         <section
             id="about"
-            className="flex items-center justify-center bg-gradient-to-t dark:bg-gradient-to-bl from-gray-300 to-white dark:from-gray-900 dark:to-gray-700 md:py-20 mt-16 lg:mt-20"
+            className="flex items-center justify-center bg-gradient-to-t dark:bg-gradient-to-bl from-gray-300 to-white dark:from-gray-900 dark:to-gray-700 md:py-20 lg:mt-20"
         >
-            <div className="relative z-10 px-6 py-8 md:px-14 lg:px-24 text-center md:flex gap-10 md:text-left">
+            <div className="px-4 pb-8 md:py-8 md:px-14 lg:px-24 text-center md:flex gap-10 md:text-left">
                 <div className="logo flex items-center justify-center w-full">
                     <Fav className="w-48 md:w-56 fill-[#1a1a1a] dark:fill-gray-200" />
                 </div>
