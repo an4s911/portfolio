@@ -59,7 +59,7 @@ const ProjectCard = ({ project }) => (
 
 function ListProjects({ projects }) {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {projects.map((project, index) => (
                 <ProjectCard key={index} project={project} />
             ))}
@@ -76,7 +76,7 @@ function MoreProjects({ projects }) {
         <div className="flex flex-col items-center">
             <Button
                 onClick={toggleOpen}
-                className="flex items-center gap-1 underline shadow-none p-0 text-sm md:text-base my-5"
+                className="text-inherit flex items-center gap-1 underline shadow-none p-0 text-sm md:text-base my-5"
             >
                 <span className="whitespace-nowrap">View More</span>
                 <ArrowDownIcon
