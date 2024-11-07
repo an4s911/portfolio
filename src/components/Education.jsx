@@ -2,7 +2,7 @@ const EducationItem = ({ edu }) => (
     <div className="mb-4">
         <h3 className="text-xl font-semibold">{edu.degree}</h3>
         <p className="dt dark:text-gray-400 italic">
-            {`${edu.year > 2024 ? "Expected Graduation" : "Graduated"}: ${edu.year}`}
+            {`${edu.year > new Date().getFullYear() ? "Expected Graduation" : "Graduated"}: ${edu.year}`}
         </p>
         <p className="dt dark:text-gray-400">
             {edu.institution} - {edu.address}
