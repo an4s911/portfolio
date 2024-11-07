@@ -26,3 +26,7 @@ section {
 section:not(:last-child):not(:first-of-type) {
     @apply border-gray-200 dark:border-[#2f2f2f] border-b-[1px] transition-[border] duration-300;
 }
+
+#contact form input, #contact form textarea {
+    @apply text-gray-900;
+}
