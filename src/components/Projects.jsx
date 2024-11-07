@@ -5,6 +5,7 @@ import DotfilesImg from "../assets/images/projects/dotfiles.png";
 import CaffeineCornerImg from "../assets/images/projects/caffeine-corner.png";
 import OdinCalculatorImg from "../assets/images/projects/odin-calculator.png";
 import CS50FinalImg from "../assets/images/projects/cs50-final.png";
+import DicegameImg from "../assets/images/projects/dicegame.png";
 
 const ProjectCard = ({ project }) => (
     <div className="transition-[background] duration-300 bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden project-card flex flex-col">
@@ -127,6 +128,15 @@ function Projects() {
             technologies: ["HTML", "CSS", "JavaScript", "Flask", "PostgreSQL"],
             demo: "https://cs50-final-an4s911.vercel.app/",
             github: "https://github.com/an4s911/cs50-final-project",
+        },
+        {
+            title: "Dicegame",
+            description:
+                "A simple dice game that allows users to roll dice and play against the computer.",
+            image: DicegameImg,
+            technologies: ["HTML", "CSS", "JavaScript"],
+            demo: "https://an4s911.github.io/dicegame",
+            github: "https://github.com/an4s911/dicegame",
         },
     ];
 
