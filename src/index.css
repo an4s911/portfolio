@@ -17,10 +17,10 @@ a * {
     font-family: Cantarell, Inter, sans-serif;
 }
 
-#skills {
+section {
     @apply py-16 px-4 md:px-8 lg:px-16 scroll-mt-16 lg:scroll-mt-20;
 }
 
-#skills:not(:last-child) {
-    @apply border-gray-200 dark:border-gray-700 shadow-sm dark:shadow-md;
+section:not(:last-child):not(:first-of-type) {
+    @apply border-gray-200 dark:border-[#2f2f2f] border-b-[1px];
 }
