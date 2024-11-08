@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-    @apply scroll-smooth;
+    @apply scroll-smooth tracking-wide;
     font-family: "Space Mono", Cantarell, Inter, sans-serif;
 }
 
@@ -16,6 +16,7 @@ a,
 a *,
 button,
 button * {
+    @apply tracking-normal;
     font-family: Cantarell, Inter, sans-serif;
 }
 
