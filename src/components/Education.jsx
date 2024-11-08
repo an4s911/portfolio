@@ -47,7 +47,7 @@ function Education() {
     ];
 
     return (
-        <section id="education" className="tracking-wide">
+        <section id="education">
             <h2 className="text-3xl font-bold mb-8">
                 Education &amp; Certifications
             </h2>
