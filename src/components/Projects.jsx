@@ -95,33 +95,6 @@ function MoreProjects({ projects }) {
 function Projects() {
     const projects = [
         {
-            title: "Caffeine Corner",
-            description:
-                "An online coffee shop that offers a range of high-quality coffee drinks and baked goods.",
-            image: CaffeineCornerImg,
-            technologies: ["React", "Tailwind CSS"],
-            demo: "https://caffeine-corner.netlify.app/",
-            github: "https://github.com/an4s911/caffeine-corner",
-        },
-        {
-            title: "Odin Calculator",
-            description:
-                "A simple calculator that allows users to perform basic arithmetic operations.",
-            image: OdinCalculatorImg,
-            technologies: ["JavaScript", "CSS"],
-            demo: "https://an4s911.github.io/odin-calculator/",
-            github: "https://github.com/an4s911/odin-calculator",
-        },
-        {
-            title: "Linux Dotfiles",
-            description:
-                "A collection of dotfiles and configuration files for Linux systems.",
-            image: DotfilesImg,
-            technologies: ["Bash", "Git", "Nvim", "Tmux"],
-            demo: "",
-            github: "https://github.com/an4s911/dotfiles",
-        },
-        {
             title: "Simple Flask Blog",
             description:
                 "A simple blog application built with Flask and PostgreSQL.",
@@ -140,6 +113,15 @@ function Projects() {
             github: "https://github.com/an4s911/dicegame",
         },
         {
+            title: "Caffeine Corner",
+            description:
+                "An online coffee shop that offers a range of high-quality coffee drinks and baked goods.",
+            image: CaffeineCornerImg,
+            technologies: ["React", "Tailwind CSS"],
+            demo: "https://caffeine-corner.netlify.app/",
+            github: "https://github.com/an4s911/caffeine-corner",
+        },
+        {
             title: "Brits - Brightness Control",
             description:
                 "Simple brightness control tool for Linux that accurately adjusts the screen brightness.",
@@ -147,6 +129,24 @@ function Projects() {
             technologies: ["Python", "Linux"],
             demo: "",
             github: "https://github.com/an4s911/brits",
+        },
+        {
+            title: "Odin Calculator",
+            description:
+                "A simple calculator that allows users to perform basic arithmetic operations.",
+            image: OdinCalculatorImg,
+            technologies: ["JavaScript", "CSS"],
+            demo: "https://an4s911.github.io/odin-calculator/",
+            github: "https://github.com/an4s911/odin-calculator",
+        },
+        {
+            title: "Linux Dotfiles",
+            description:
+                "A collection of dotfiles and configuration files for Linux systems.",
+            image: DotfilesImg,
+            technologies: ["Bash", "Git", "Nvim", "Tmux"],
+            demo: "",
+            github: "https://github.com/an4s911/dotfiles",
         },
     ];
 
