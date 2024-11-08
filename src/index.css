@@ -15,7 +15,8 @@
 a,
 a *,
 button,
-button * {
+button *,
+.font-nomono {
     @apply tracking-normal;
     font-family: Cantarell, Inter, sans-serif;
 }
