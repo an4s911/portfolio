@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { SocialIcon } from "react-social-icons";
 
 function Contact() {
+    const [formSubmissionError, setFormSubmissionError] = useState(false);
+    const [formSubmissionSuccess, setFormSubmissionSuccess] = useState(false);
+
     return (
         <section id="contact">
             <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
