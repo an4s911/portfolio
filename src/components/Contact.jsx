@@ -47,28 +47,32 @@ function Contact() {
                     className="flex flex-col gap-4"
                     onSubmit={(e) => {
                         e.preventDefault();
-                        fetch(
-                            `${import.meta.env.VITE_API_URL}/api/send-email/`,
-                            {
-                                method: "POST",
-                                headers: {
-                                    "Content-Type":
-                                        "application/x-www-form-urlencoded",
+                        try {
+                            fetch(
+                                `${import.meta.env.VITE_API_URL}/api/send-email/`,
+                                {
+                                    method: "POST",
+                                    headers: {
+                                        "Content-Type":
+                                            "application/x-www-form-urlencoded",
+                                    },
+                                    body: new URLSearchParams(
+                                        new FormData(e.target),
+                                    ),
                                 },
-                                body: new URLSearchParams(
-                                    new FormData(e.target),
-                                ),
-                            },
-                        ).then((res) => {
-                            if (res.ok) {
-                                setFormSubmissionError(false);
-                                setFormSubmissionSuccess(true);
-                                e.target.reset();
-                            } else {
-                                setFormSubmissionSuccess(false);
-                                setFormSubmissionError(true);
-                            }
-                        });
+                            ).then((res) => {
+                                if (res.ok) {
+                                    setFormSubmissionError(false);
+                                    setFormSubmissionSuccess(true);
+                                    e.target.reset();
+                                } else {
+                                    setFormSubmissionSuccess(false);
+                                    setFormSubmissionError(true);
+                                }
+                            });
+                        } catch (error) {
+                            setFormSubmissionError(true);
+                        }
                     }}
                 >
                     <div>
