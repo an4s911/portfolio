@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 import { SocialIcon } from "react-social-icons";
 
@@ -47,32 +48,26 @@ function Contact() {
                     className="flex flex-col gap-4"
                     onSubmit={(e) => {
                         e.preventDefault();
-                        try {
-                            fetch(
+                        axios
+                            .post(
                                 `${import.meta.env.VITE_API_URL}/api/send-email/`,
+                                new URLSearchParams(new FormData(e.target)),
                                 {
-                                    method: "POST",
                                     headers: {
-                                        "Content-Type":
-                                            "application/x-www-form-urlencoded",
+                                        "Content-Type": "application/x-www-form-urlencoded",
                                     },
-                                    body: new URLSearchParams(
-                                        new FormData(e.target),
-                                    ),
                                 },
-                            ).then((res) => {
-                                if (res.ok) {
-                                    setFormSubmissionError(false);
-                                    setFormSubmissionSuccess(true);
-                                    e.target.reset();
-                                } else {
-                                    setFormSubmissionSuccess(false);
-                                    setFormSubmissionError(true);
-                                }
+                            )
+                            .then((res) => {
+                                setFormSubmissionError(false);
+                                setFormSubmissionSuccess(true);
+                                e.target.reset();
+                            })
+                            .catch((err) => {
+                                setFormSubmissionError(true);
+                                setFormSubmissionSuccess(false);
+                                console.log(err);
                             });
-                        } catch (error) {
-                            setFormSubmissionError(true);
-                        }
                     }}
                 >
                     <div>
