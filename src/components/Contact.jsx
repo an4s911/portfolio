@@ -26,63 +26,90 @@ function Contact() {
                         ))}
                     </ul>
                 </div>
-                <div>
-                    <form
-                        className="flex flex-col gap-4"
-                        onSubmit={(e) => {
-                            e.preventDefault();
-                            e.target.reset();
-                        }}
+            </div>
+            <div className="w-full md:w-1/2 lg:w-1/2">
+                {formSubmissionError && (
+                    <div className="text-white bg-red-500 p-4 mb-4">
+                        There was an error submitting the form, please submit
+                        again
+                    </div>
+                )}
+                {formSubmissionSuccess && (
+                    <div className="text-white bg-green-500 rounded-md p-4 mb-4">
+                        Form submitted successfully
+                    </div>
+                )}
+                <form
+                    className="flex flex-col gap-4"
+                    onSubmit={(e) => {
+                        e.preventDefault();
+                        fetch(
+                            `${import.meta.env.VITE_API_URL}/api/send-email/`,
+                            {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type":
+                                        "application/x-www-form-urlencoded",
+                                },
+                                body: new URLSearchParams(
+                                    new FormData(e.target),
+                                ),
+                            },
+                        ).then((res) => {
+                            if (res.ok) {
+                                setFormSubmissionError(false);
+                                setFormSubmissionSuccess(true);
+                                e.target.reset();
+                            } else {
+                                setFormSubmissionSuccess(false);
+                                setFormSubmissionError(true);
+                            }
+                        });
+                    }}
+                >
+                    <div>
+                        <label htmlFor="name" className="block">
+                            Name
+                        </label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            className="w-full p-2 border rounded"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="email" className="block">
+                            Email
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            className="w-full p-2 border rounded"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="message" className="block">
+                            Message
+                        </label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="4"
+                            className="w-full p-2 border rounded"
+                            required
+                        ></textarea>
+                    </div>
+                    <button
+                        type="submit"
+                        className="dt bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 w-max"
                     >
-                        {/* For now the form is disabled */}
-                        {/* TODO: I will enable it after adding a backend mechanism to make it work */}
-                        <div>
-                            <label htmlFor="name" className="block">
-                                Name
-                            </label>
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                className="w-full p-2 border rounded"
-                                required
-                                disabled
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="email" className="block">
-                                Email
-                            </label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                className="w-full p-2 border rounded"
-                                required
-                                disabled
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="message" className="block">
-                                Message
-                            </label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                rows="4"
-                                className="w-full p-2 border rounded"
-                                required
-                                disabled
-                            ></textarea>
-                        </div>
-                        <button
-                            type="submit"
-                            className="dt bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 w-max"
-                        >
-                            Send Message
-                        </button>
-                    </form>
-                </div>
+                        Send Message
+                    </button>
+                </form>
             </div>
         </section>
     );
