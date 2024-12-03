@@ -5,7 +5,7 @@ function About() {
     return (
         <section
             id="about"
-            className="flex items-center justify-center bg-gradient-to-t dark:bg-gradient-to-bl from-gray-300 to-white dark:from-gray-900 dark:to-gray-700 md:pb-16 md:pt-32 lg:p-0 md:h-screen h-screen"
+            className="flex items-center justify-center bg-gradient-to-t dark:bg-gradient-to-bl from-gray-300 to-white dark:from-gray-900 dark:to-gray-700 md:pb-16 md:pt-32 lg:p-0 md:h-screen h-max"
         >
             <div className="px-4 md:px-14 lg:px-24 text-center md:flex gap-10 md:text-left lg:mt-20">
                 <div className="logo flex items-center justify-center w-full">
