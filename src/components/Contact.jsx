@@ -1,6 +1,6 @@
 import axios from "axios";
 import { LoaderCircle } from "lucide-react";
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import { SocialIcon } from "react-social-icons";
 
 function Contact() {
@@ -77,7 +77,7 @@ function Contact() {
                 } ${isLoading && "relative"}`}
             >
                 {formSubmissionError && (
-                    <div className="text-white bg-red-500 p-4 mb-4">
+                    <div className="text-white bg-red-500 p-4 mb-4 rounded-md">
                         There was an error submitting the form, please submit
                         again
                     </div>
