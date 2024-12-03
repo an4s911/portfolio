@@ -7,14 +7,17 @@ function Contact() {
     const [formSubmissionSuccess, setFormSubmissionSuccess] = useState(false);
 
     return (
-        <section id="contact">
-            <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
-            <div className="grid md:grid-cols-2 gap-8">
+        <section
+            id="contact"
+            className="flex flex-col md:flex-row items-center w-full gap-10 md:gap-12 lg:gap-20"
+        >
+            <div className="flex-1">
+                <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
+                <p className="mb-4">
+                    I'm always open to new opportunities and collaborations.
+                    Feel free to reach out!
+                </p>
                 <div>
-                    <p className="mb-4">
-                        I'm always open to new opportunities and collaborations.
-                        Feel free to reach out!
-                    </p>
                     <ul className="flex flex-wrap gap-4">
                         {[
                             "https://www.linkedin.com/in/an4s911",

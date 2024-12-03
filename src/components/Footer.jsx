@@ -72,7 +72,9 @@ const Footer = () => {
                     <p className="text-center">
                         <span>&copy; {currentYear}</span>{" "}
                         <span className="italic">Anas Bashir.</span>{" "}
-                        <span className="whitespace-nowrap">All rights reserved.</span>
+                        <span className="whitespace-nowrap">
+                            All rights reserved.
+                        </span>
                     </p>
                     <div className="flex space-x-4 mt-4 md:mt-0">
                         <a href="#" className="dt hover:text-gray-400">

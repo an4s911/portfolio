@@ -5,9 +5,9 @@ function About() {
     return (
         <section
             id="about"
-            className="flex items-center justify-center bg-gradient-to-t dark:bg-gradient-to-bl from-gray-300 to-white dark:from-gray-900 dark:to-gray-700 md:py-20 lg:mt-20"
+            className="flex items-center justify-center bg-gradient-to-t dark:bg-gradient-to-bl from-gray-300 to-white dark:from-gray-900 dark:to-gray-700 md:pb-16 md:pt-32 lg:p-0 md:h-screen h-screen"
         >
-            <div className="px-4 pb-8 md:py-8 md:px-14 lg:px-24 text-center md:flex gap-10 md:text-left">
+            <div className="px-4 md:px-14 lg:px-24 text-center md:flex gap-10 md:text-left lg:mt-20">
                 <div className="logo flex items-center justify-center w-full">
                     <Fav className="w-48 md:w-56 fill-[#1a1a1a] dark:fill-gray-200" />
                 </div>
@@ -21,7 +21,7 @@ function About() {
                     <h2 className="text-2xl font-bold leading-tight w-full">
                         Full-Stack Developer
                     </h2>
-                    <p className="text-lg mb-4">
+                    <p className="text-lg mb-4 text-justify md:text-left">
                         I create robust, scalable web applications that deliver
                         exceptional user experiences. With expertise in both
                         front-end and back-end technologies, I bring ideas to
