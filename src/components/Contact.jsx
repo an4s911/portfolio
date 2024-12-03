@@ -76,14 +76,14 @@ function Contact() {
                         : ""
                 } ${isLoading && "relative"}`}
             >
-                {formSubmissionError && (
+                {formSubmissionError && !isLoading && (
                     <div className="text-white bg-red-500 p-4 mb-4 rounded-md">
                         There was an error submitting the form, please submit
                         again
                     </div>
                 )}
                 {formSubmissionSuccess && (
-                    <div className="text-white px-8 py-4 text-xl font-bold text-center bg-gray-600 rounded-md w-max sm:w-min mt-4 sm:text-nowrap">
+                    <div className="text-white px-8 py-4 text-xl font-bold text-center bg-green-600 rounded-md w-max sm:w-min mt-4 sm:text-nowrap">
                         Your message has been sent!
                         <br />
                         Thank you
@@ -92,26 +92,6 @@ function Contact() {
                 {isLoading && (
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                         <LoaderCircle className="animate-spin opacity-70 h-16 w-16" />
-                        {/* <svg */}
-                        {/*     className="animate-spin -ml-1 mr-3 h-10 w-10 text-white" */}
-                        {/*     xmlns="http://www.w3.org/2000/svg" */}
-                        {/*     fill="none" */}
-                        {/*     viewBox="0 0 24 24" */}
-                        {/* > */}
-                        {/*     <circle */}
-                        {/*         className="opacity-25" */}
-                        {/*         cx="12" */}
-                        {/*         cy="12" */}
-                        {/*         r="10" */}
-                        {/*         stroke="currentColor" */}
-                        {/*         strokeWidth="4" */}
-                        {/*     ></circle> */}
-                        {/*     <path */}
-                        {/*         className="opacity-75" */}
-                        {/*         fill="currentColor" */}
-                        {/*         d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" */}
-                        {/*     ></path> */}
-                        {/* </svg> */}
                     </div>
                 )}
                 <form
