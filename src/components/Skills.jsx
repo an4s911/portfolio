@@ -1,99 +1,29 @@
-const SkillCategory = ({ title, skills }) => (
-    <div className="transition-[border,box-shadow] duration-300 shadow dark:shadow-gray-700 border-[1px] border-gray-200 dark:border-gray-800 px-6 py-4 rounded-md flex flex-col gap-4">
-        <h3 className="text-xl font-semibold">{title}</h3>
-        <div className="flex flex-wrap">
-            {skills.map((skill, index) => (
-                <span
-                    key={index}
-                    className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-                >
-                    {skill}
-                </span>
-            ))}
+import skillsets from "../data/skillsList";
+
+const SkillCategory = ({ title, skills }) => {
+    return (
+        <div className="transition-[border,box-shadow] duration-300 shadow dark:shadow-gray-700 border-[1px] border-gray-200 dark:border-gray-800 px-6 py-4 rounded-md flex flex-col gap-4">
+            <h3 className="text-xl font-semibold">{title}</h3>
+            <div className="grid grid-cols-2">
+                {skills.map((skill, index) => (
+                    <div key={index}>
+                        <span className="bg-gray-200 flex gap-1 items-center rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                            {
+                                <skill.icon
+                                    color={skill.color}
+                                    className={`w-4 h-4 rounded-sm ${skill.bg ? "bg-gray-700" : ""}`}
+                                />
+                            }
+                            {skill.name}
+                        </span>
+                    </div>
+                ))}
+            </div>
         </div>
-    </div>
-);
+    );
+};
 
 const Skills = () => {
-    const skillsets = [
-        {
-            title: "Front-End",
-            skills: [
-                "React",
-                "Tailwind CSS",
-                "Vite",
-                "Webpack",
-                "Eslint/Prettier",
-            ],
-        },
-        {
-            title: "Back-End",
-            skills: ["Django", "Flask", "Gunicorn"],
-        },
-        {
-            title: "Databases",
-            skills: ["PostgreSQL", "MySQL", "SQLite"],
-        },
-        {
-            title: "DevOps",
-            skills: ["Docker", "Nginx", "Git", "GitHub", "GitLab"],
-        },
-        {
-            title: "Hosting & Cloud",
-            skills: ["Vercel", "Netlify", "DNS Management"],
-        },
-        {
-            title: "Design",
-            skills: ["Figma", "Canva", "Inkscape", "Gimp"],
-        },
-        {
-            title: "APIs & Protocols",
-            skills: ["RESTful API", "JSON"],
-        },
-        {
-            title: "Authentication",
-            skills: ["JWT"],
-        },
-        {
-            title: "Virtualization",
-            skills: ["VirtualBox", "QEMU/KVM/LibVirt"],
-        },
-        {
-            title: "Operating Systems & Tools",
-            skills: [
-                "Linux",
-                "Arch Linux",
-                "Debian",
-                "Fedora",
-                "Bash scripting",
-                "Pacman",
-                "Apt",
-                "Flatpak",
-                "AUR",
-                "Disk Partitioning",
-                "Timeshift",
-                "Htop",
-                "Gparted",
-            ],
-        },
-        {
-            title: "Miscellaneous",
-            skills: [
-                "Java",
-                "C",
-                "Assembly",
-                "NPM/Yarn",
-                "Neovim/Vim",
-                "Alacritty",
-                "i3 WM",
-                "Polybar",
-                "Tmux",
-                "Dotfiles",
-                "FileZilla",
-            ],
-        },
-    ];
-
     return (
         <section id="skills" className="flex flex-col gap-8">
             <h2 className="text-3xl font-bold">Skills &amp; Expertise</h2>
