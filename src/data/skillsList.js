@@ -32,12 +32,12 @@ import {
     SiVim,
     SiVimHex,
     SiLinux,
-    SiVirtualbox,
-    SiVirtualboxHex,
     SiNetlify,
     SiNetlifyHex,
     SiVercel,
     SiVercelHex,
+    SiGitlab,
+    SiGitlabHex,
 } from "@icons-pack/react-simple-icons";
 import { Coffee } from "lucide-react";
 
@@ -140,9 +140,9 @@ const misc = [
         color: SiGithubHex,
     },
     {
-        name: "Virtualbox",
-        icon: SiVirtualbox,
-        color: SiVirtualboxHex,
+        name: "GitLab",
+        icon: SiGitlab,
+        color: SiGitlabHex,
     },
     {
         name: "Netlify",
