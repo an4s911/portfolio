@@ -159,7 +159,7 @@ const misc = [
 const skills = [
     { title: "Languages", skills: languages },
     { title: "Tools", skills: tools },
-    { title: "Misc", skills: misc },
+    { title: "Miscellaneous", skills: misc },
 ];
 
 export default skills;
