@@ -16,7 +16,7 @@ const ProjectCard = ({ project }) => (
             className="w-full h-48 object-cover object-top"
         />
         <div className="p-6 h-full flex flex-col">
-            <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+            <h3 className="text-xl font-semibold mb-2 font-nomono">{project.title}</h3>
             <p className="dt text-gray-600 dark:text-gray-300 mb-4 flex-1 font-nomono">
                 {project.description}
             </p>
@@ -28,7 +28,7 @@ const ProjectCard = ({ project }) => (
                     {project.technologies.map((tech, index) => (
                         <span
                             key={index}
-                            className="dt bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-500 text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded"
+                            className="dt bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 text-base font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded"
                         >
                             {tech}
                         </span>
@@ -80,11 +80,14 @@ function MoreProjects({ projects }) {
         <div className="flex flex-col items-center">
             <Button
                 onClick={toggleOpen}
-                className="text-inherit flex items-center gap-1 underline shadow-none p-0 text-sm md:text-base my-5"
+                className={`text-inherit flex items-center gap-1 underline shadow-none p-0 text-sm md:text-lg my-5
+                border-[1px] px-4 py-2 border-gray-400 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700
+                ${open ? "" : "animate-bounce"} `}
             >
                 <span className="whitespace-nowrap">View More</span>
                 <ArrowDownIcon
-                    className={`w-4 ${open && "-rotate-180"} transition-transform duration-700`}
+                    strokeWidth={3}
+                    className={`w-6 ${open ? "rotate-180" : ""} transition-transform duration-700`}
                 />
             </Button>
             <Collapse open={open}>
