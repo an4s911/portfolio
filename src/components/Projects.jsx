@@ -7,6 +7,7 @@ import OdinCalculatorImg from "../assets/images/projects/odin-calculator.png";
 import CS50FinalImg from "../assets/images/projects/cs50-final.png";
 import DicegameImg from "../assets/images/projects/dicegame.png";
 import BritsImg from "../assets/images/projects/brits.jpg";
+import LibraryAppImg from "../assets/images/projects/library-app.png";
 
 const ProjectCard = ({ project }) => (
     <div className="transition-[background] duration-300 bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden project-card flex flex-col">
@@ -100,9 +101,23 @@ function MoreProjects({ projects }) {
 function Projects() {
     const projects = [
         {
+            title: "Fullstack Library App",
+            description: "Store and manage personal books. With borrows and returns.",
+            image: LibraryAppImg,
+            technologies: [
+                "Django",
+                "React",
+                "Tailwind CSS",
+                "PostgreSQL",
+                "Vite",
+                "Netlify",
+            ],
+            demo: "https://anas-library-app.netlify.app/",
+            github: "",
+        },
+        {
             title: "Simple Flask Blog",
-            description:
-                "A simple blog application built with Flask and PostgreSQL.",
+            description: "A simple blog application built with Flask and PostgreSQL.",
             image: CS50FinalImg,
             technologies: ["HTML", "CSS", "JavaScript", "Flask", "PostgreSQL"],
             demo: "https://cs50-final-an4s911.vercel.app/",
