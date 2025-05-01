@@ -116,6 +116,15 @@ function Projects() {
             github: "",
         },
         {
+            title: "Caffeine Corner",
+            description:
+                "An online coffee shop that offers a range of high-quality coffee drinks and baked goods.",
+            image: CaffeineCornerImg,
+            technologies: ["React", "Tailwind CSS"],
+            demo: "https://caffeine-corner.netlify.app/",
+            github: "https://github.com/an4s911/caffeine-corner",
+        },
+        {
             title: "Simple Flask Blog",
             description: "A simple blog application built with Flask and PostgreSQL.",
             image: CS50FinalImg,
@@ -131,15 +140,6 @@ function Projects() {
             technologies: ["HTML", "CSS", "JavaScript"],
             demo: "https://an4s911.github.io/dicegame",
             github: "https://github.com/an4s911/dicegame",
-        },
-        {
-            title: "Caffeine Corner",
-            description:
-                "An online coffee shop that offers a range of high-quality coffee drinks and baked goods.",
-            image: CaffeineCornerImg,
-            technologies: ["React", "Tailwind CSS"],
-            demo: "https://caffeine-corner.netlify.app/",
-            github: "https://github.com/an4s911/caffeine-corner",
         },
         {
             title: "Brits - Brightness Control",
